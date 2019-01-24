@@ -1,7 +1,8 @@
 <%-- 
-    Document   : index
+    Document   : YCGSRegister
     Created on : 2019. 1. 20
     Author     : Youngsun Chang
+    Observer   : Gyeonglim Seo
 --%>
 
 <jsp:include page="/YCGSBanner.jsp" />
