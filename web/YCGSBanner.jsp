@@ -2,6 +2,7 @@
     Document   : YCGSBanner
     Created on : 2019. 1. 20, 오전 12:49:03
     Author     : Youngsun Chang
+    Observer   : Gyeonglim Seo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
