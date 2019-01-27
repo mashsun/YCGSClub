@@ -22,21 +22,21 @@
 
             <label class="pad_top">IT Program</label>
             <select name="program">
-                <option value="saab">CAS</option>
-                <option value="fiat">SQATE</option>
-                <option value="audi">CPA</option>
-                <option value="audi">CP</option>
-                <option value="audi">ITID</option>
-                <option value="audi">CAD</option>
-                <option value="audi">ITSS</option>
+                <option value="CAS">CAS</option>
+                <option value="SQATE">SQATE</option>
+                <option value="CPA">CPA</option>
+                <option value="CP">CP</option>
+                <option value="ITID">ITID</option>
+                <option value="CAD">CAD</option>
+                <option value="ITSS">ITSS</option>
               </select><br>
             
            <label class="pad_top">Year Level</label>
             <select name="level">
-                <option value="saab">1</option>
-                <option value="fiat">2</option>
-                <option value="audi">3</option>
-                <option value="audi">4</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
               </select><br>
            
             <input type="submit" value="Register Now!">
