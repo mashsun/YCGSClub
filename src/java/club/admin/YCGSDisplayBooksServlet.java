@@ -24,7 +24,10 @@ public class YCGSDisplayBooksServlet extends HttpServlet {
             throws ServletException, IOException {
             
             BookIO book= new BookIO();
-             ArrayList<Book> books = book.getBooks(""); 
+            ArrayList<Book> books = book.getBooks("/WEB-INF/books.txt"); 
+            PrintWriter out= response.getWriter();
+            out.println("<h2> books[1] </h2>");
+             
     }
 
     @Override
