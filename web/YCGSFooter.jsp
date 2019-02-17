@@ -5,6 +5,8 @@
     Observer   : Gyeonglim Seo
 --%>
 
-<footer>
-    <p>&copy; Copyright ${currentYear}  Youngsun Chang &  Gyeonglim Seo.
-</footer>
+        <footer>
+            <p>&copy; Copyright ${currentYear}  Youngsun Chang &  Gyeonglim Seo.
+        </footer>
+</body>
+</html>

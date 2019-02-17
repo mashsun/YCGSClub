@@ -4,9 +4,17 @@
         <servlet-name>YCGSDisplayBooksServlet</servlet-name>
         <servlet-class>club.admin.YCGSDisplayBooksServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>YCGSAddBookServlet</servlet-name>
+        <servlet-class>club.admin.YCGSAddBookServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>YCGSDisplayBooksServlet</servlet-name>
         <url-pattern>/YCGSDisplayBooks</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>YCGSAddBookServlet</servlet-name>
+        <url-pattern>/YCGSAddBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

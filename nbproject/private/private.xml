@@ -3,7 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/SCHOOL/GitHub/YCGSClub/src/java/club/admin/YCGSDisplayBooksServlet.java</file>
+            <file>file:/C:/murach/YCGSClub/web/YCGSAddBook.jsp</file>
+            <file>file:/C:/murach/YCGSClub/src/java/club/data/BookIO.java</file>
+            <file>file:/C:/murach/YCGSClub/web/YCGSDisplayBooks.jsp</file>
         </group>
     </open-files>
 </project-private>

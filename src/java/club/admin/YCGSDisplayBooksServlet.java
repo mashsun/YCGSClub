@@ -1,33 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+    Document   : YCGSDisplayBooksServlet.java
+    Created on : 2019. 1. 20
+    Author     :  Gyeonglim Seo 
+    Observer : Youngsun Chang
+*/
 package club.admin;
 
 import club.data.*;
 import club.business.*;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
-/**
- *
- * @author dbmas
- */
-public class YCGSDisplayBooksServlet extends HttpServlet {
+import javax.servlet.ServletContext;
 
+
+public class YCGSDisplayBooksServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
             
+            //Forward url
+            String url="/YCGSDisplayBooks.jsp";
+            
+            //Get a path of books.txt
+            ServletContext sc=this.getServletContext();
+            String path=sc.getRealPath ("/WEB-INF/books.txt");
+            
+            //Create BookIO instance 
             BookIO book= new BookIO();
-            ArrayList<Book> books = book.getBooks("/WEB-INF/books.txt"); 
-            PrintWriter out= response.getWriter();
-            out.println("<h2> books[1] </h2>");
-             
+            
+            //Put books data into ArrayList
+           ArrayList<Book> books = book.getBooks(path); 
+            
+            request.setAttribute("book", books);
+            
+            getServletContext().getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
