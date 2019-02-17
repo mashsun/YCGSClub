@@ -6,7 +6,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:include page="/YCGSBanner.jsp" />
+<jsp:include page="/includes/YCGSBanner.jsp" />
 <section>
     <h1>List of Books</h1>
     <table>
@@ -26,4 +26,4 @@
         <input type="submit" value="Add Book" style="width: 100px; margin-left: 8px; margin-top: 0px">
     </form>
 </section>
- <jsp:include page="/YCGSFooter.jsp" />
+ <jsp:include page="/includes/YCGSFooter.jsp" />

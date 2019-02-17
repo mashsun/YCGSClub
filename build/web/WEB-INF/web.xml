@@ -16,6 +16,13 @@
         <servlet-name>YCGSAddBookServlet</servlet-name>
         <url-pattern>/YCGSAddBook</url-pattern>
     </servlet-mapping>
+    
+    <!-- error page -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error//YCGSError.jsp</location>
+    </error-page>
+    
     <session-config>
         <session-timeout>
             30

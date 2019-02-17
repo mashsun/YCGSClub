@@ -6,18 +6,20 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:include page="/YCGSBanner.jsp" />
+<jsp:include page="/includes/YCGSBanner.jsp" />
 <section>
     <h1>Add a Book</h1>
+    <p style="color: red">${message}</p>
+    
     <form  action="YCGSAddBook" method="post">
         <label for="code" >Code: </label>
         <input type="text"  name="code" value="${book.code}" style="width: 100px"><br>
         <label for="description" >Description:  </label>
         <input type="text"  name="description" value="${book.description}" style="width: 200px"><br>
         <label for="quantity" >Quantity:  </label>
-        <input type="text"  name="quantity" value="${book.quantity}" style="width: 60px"><br> 
-        <input type="submit" value="Save" >
-        <input type="submit" value="cancel" formaction="YCGSDisplayBooks" method="post">
+        <input type="text"  name="quantity" value="${book.quantity}" style="width: 60px" ><br> 
+        <input type="submit" value="Save" style="width:60px; margin-left: 118px">
+        <input type="submit" value="cancel" formaction="YCGSDisplayBooks" method="post" style="width: 60px; ">
     </form>
 </section>
- <jsp:include page="/YCGSFooter.jsp" />
+ <jsp:include page="/includes/YCGSFooter.jsp" />

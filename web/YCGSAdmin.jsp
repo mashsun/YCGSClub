@@ -4,9 +4,9 @@
     Author     : Gyeonglim Seo 
     Observer   : Youngsun Chang
 --%>
-<jsp:include page="/YCGSBanner.jsp" />
+<jsp:include page="/includes/YCGSBanner.jsp" />
     <section>
         <h1> Admin: Data Maintenance</h1>
         <a href="YCGSDisplayBooks">Maintain Books</a>
     </section>
- <jsp:include page="/YCGSFooter.jsp" />
+ <jsp:include page="/includes/YCGSFooter.jsp" />
