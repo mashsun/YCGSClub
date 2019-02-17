@@ -5,8 +5,10 @@
     Observer   : Youngsun Chang
 */
 package club.admin;
+import club.business.*;
+import club.data.*;
 import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +18,8 @@ public class YCGSAddBookServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
            
-            String url="/YCGSdisplayBooks";
+           BookIO bookIO= new BookIO();
+            String url="";
             String message="";
             int quantity=0;
             
@@ -30,26 +33,37 @@ public class YCGSAddBookServlet extends HttpServlet {
             }else{
                quantity=Integer.parseInt(  request.getParameter("quantity"));
             }
+            //Make a new book instance
+            Book book=new Book(code, description, quantity);
             
+            // validation check
             if(code==null || code==""){
-                message="Book code is required. \n ";
+                message="Book code is required.<br/>";
             }
             if(description.length()<3){
-                 message=message+"Description must have at least 3 characters.\n";
+                 message+="Description must have at least 3 characters.<br/>";
             }
             if(quantity<0){
-                 message=message+"Quantity must be a positive number. \n";
+                 message+="Quantity must be a positive number.<br/>";
             }
             
-            if(message!=null){
+            //if no error, then insert a book
+            if(!message.isEmpty()){
                     url="/YCGSAddBook.jsp";
-            }
-            request.setAttribute("message", message);
+                   
+                    request.setAttribute("message", message);
             
-            getServletContext().getRequestDispatcher(url).forward(request, response);
+                    request.setAttribute("book", book);
+                    getServletContext().getRequestDispatcher(url).forward(request, response);
+            }else{
+                     //Get a path of books.txt
+                    ServletContext sc=this.getServletContext();
+                    String path=sc.getRealPath ("/WEB-INF/books.txt");
+                    bookIO.insert(book, path);
+                    
+                    response.sendRedirect("YCGSDisplayBooks");
+            }
     }
-
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
