@@ -37,13 +37,13 @@ public class YCGSAddBookServlet extends HttpServlet {
             Book book=new Book(code, description, quantity);
             
             // validation check
-            if(code==null || code==""){
+            if(code==null || "".equals(code)){
                 message="Book code is required.<br/>";
             }
-            if(description.length()<3){
+            if(description==null ||"".equals(description)|| description.length()<3 ){
                  message+="Description must have at least 3 characters.<br/>";
             }
-            if(quantity<0){
+            if(quantity<=0){
                  message+="Quantity must be a positive number.<br/>";
             }
             
