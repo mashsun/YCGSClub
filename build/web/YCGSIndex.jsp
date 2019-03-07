@@ -1,10 +1,11 @@
 <%-- 
-    Document   : index
+    Document   : YCGSIndex
     Created on : 2019. 1. 20
     Author     : Youngsun Chang
+    Observer   : Gyeonglim Seo
 --%>
 
-<jsp:include page="/YCGSBanner.jsp" />
+<jsp:include page="/includes/YCGSBanner.jsp" />
 
 <!-- start the middle column -->
 
@@ -23,4 +24,4 @@
 
 <!-- end the middle column -->
 
-<jsp:include page="/YCGSFooter.jsp" />
+<jsp:include page="/includes/YCGSFooter.jsp" />

@@ -12,6 +12,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="<c:url value='/styles/main.css'/> ">
+        <link rel="stylesheet" href="<c:url value='/styles/YCGSStyle.css'/> ">
         <title>YCGS Computer Programming Club</title>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     </head>
@@ -28,5 +29,4 @@
                 <li><a href="<c:url value='/YCGSAdmin.jsp'/>">Admin</a></li>
             </ul>
         </nav>
-    </body>
-</html>
+
