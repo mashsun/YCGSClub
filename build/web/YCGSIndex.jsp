@@ -14,7 +14,7 @@
     
     <p>Pair Programming Team:</p>
     
-    <h3>Assignment 1</h3>
+    <h3>Assignment 3</h3>
     <h3>Driver: Youngsun Chang</h3>
     <h3>Observer: Gyeonglim Seo</h3>
     
