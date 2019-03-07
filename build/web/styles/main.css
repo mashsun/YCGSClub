@@ -134,6 +134,7 @@ section input[type="text"], input[type="email"], input[type="password"], select 
 section input[type="submit"] {
     width: 10em;
     margin-top: 0.5em;
+    margin-left: 9em;
 }
 section input[type="reset"] {
     width: 6em;
