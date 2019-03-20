@@ -9,7 +9,7 @@
 
 <jsp:include page="/includes/YCGSBanner.jsp" />
 <section>
-    <table>
+    <table style="border: none;">
         <tr>
             <th>Code</th>
             <th>Description</th>

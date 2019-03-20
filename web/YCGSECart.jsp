@@ -10,29 +10,32 @@
 <jsp:include page="/includes/YCGSBanner.jsp" />
 <section>
     <h2>Your Loan Cart</h2>
-    <table>
+    <table style="border: none;">
         <tr>
             <th>Code</th>
             <th>Description</th>
-            <th>QOH</th> 
+            <th>Quantity</th> 
         </tr>
-        
-            <c:forEach var="loanitem" items="${loanitem}">
+             <c:set var="quantityTotal" value="${0}" />
+            <c:forEach var="cartitems" items="${cartItem.getItems()}">
+                <c:set var="quantityTotal" value="${quantityTotal+cartitems.quantity}" />
                 <tr>
-                    <td><c:out value="${loanitem.code}" /></td>
-                    <td><c:out value="${loanitem.description}" /></td>
-                    <td><c:out value="${loanitem.quantity}" /></td>
+                    <td><c:out value="${cartitems.code}" /></td>
+                    <td><c:out value="${cartitems.description}" /></td>
+                    <td align="right"><c:out value="${cartitems.quantity}" /></td>
                 </tr>
             </c:forEach> 
-         
+        
+        <tr><td colspan="3"></td></tr>
         <tr>
             <td></td>
-            <td align="right">Total</td>
-            <td></td> 
-        </tr>       
-        
+            <td align="right">Total:</td>
+            <td align="right">${quantityTotal}</td>
+        </tr> 
     </table>
     
+        <h2><a href="YCGSClearCart">Clear the Cart</a></h2>
+        <h2>Return to eLoan</h2>
 </section>
  <jsp:include page="/includes/YCGSFooter.jsp" />
 

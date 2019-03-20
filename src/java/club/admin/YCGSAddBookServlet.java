@@ -48,7 +48,7 @@ public class YCGSAddBookServlet extends HttpServlet {
             }
             
             //if no error, then insert a book
-            if(!message.isEmpty()){
+            if(!message.isEmpty()||message==null){
                     url="/YCGSAddBook.jsp";
                    
                     request.setAttribute("message", message);

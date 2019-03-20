@@ -26,8 +26,8 @@
             <ul>
                 <li><a href="<c:url value='/YCGSIndex.jsp'/>">Home</a></li>
                 <li><a href="<c:url value='/YCGSRegister.jsp'/>">Register</a></li>
-                <li><a href="<c:url value='/YCGSELoan'/>">eLoan</a></li>
-                <li><a href="<c:url value='/YCGSECart'/>">eCart</a></li>
+                <li><a href="<c:url value='/YCGSLoan'/>">eLoan</a></li>
+                <li><a href="<c:url value='/YCGSCart'/>">eCart</a></li>
                 <li><a href="<c:url value='/YCGSAdmin.jsp'/>">Admin</a></li>
             </ul>
         </nav>

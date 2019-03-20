@@ -20,6 +20,10 @@
         <servlet-name>YCGSCartServlet</servlet-name>
         <servlet-class>club.cart.YCGSCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>YCGSClearCartServlet</servlet-name>
+        <servlet-class>club.cart.YCGSClearCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>YCGSDisplayBooksServlet</servlet-name>
         <url-pattern>/YCGSDisplayBooks</url-pattern>
@@ -30,12 +34,16 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>YCGSLoanServlet</servlet-name>
-        <url-pattern>/YCGSELoan</url-pattern>
+        <url-pattern>/YCGSLoan</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>YCGSCartServlet</servlet-name>
-        <url-pattern>/YCGSECart</url-pattern>
+        <url-pattern>/YCGSCart</url-pattern>
     </servlet-mapping>
+    <serverlet-mapping>
+        <servlet-name>YCGSClearCartServlet</servlet-name>
+        <url-patter>/YCGSClearCart</url-patter>
+    </serverlet-mapping>
     <!-- error page -->
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>

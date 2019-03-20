@@ -24,15 +24,22 @@ public class YCGSLoanServlet extends HttpServlet {
         ServletContext sc = this.getServletContext(); 
         
         //Getting the value of the initialization parameter and printing it  
-        String path = sc.getInitParameter("booksFilePath");          
-        //String path = sc.getRealPath ("/WEB-INF/books.txt");
-      
-        //Create ELoan instance 
-        ELoan loanitem= new ELoan();
-            
-        //Put books data into ArrayList
-        ArrayList<Book> loanitems = loanitem.loadItems(path);
+        String pathPara = sc.getInitParameter("booksFilePath"); 
+        String path =sc.getRealPath(pathPara);
         
+        //Create ELoan instance 
+        ELoan eloan= new ELoan();
+        ArrayList<Book> loanitems ;
+        
+        if(sc.getAttribute("loanitem")!=null){
+             loanitems=(ArrayList<Book>)sc.getAttribute("loanitem");
+        }else{
+                    //Put books data into ArrayList
+            loanitems= eloan.loadItems(path);
+        }
+        
+        //set servletcontext and request attribute
+        sc.setAttribute("loanitem", loanitems);
         request.setAttribute("loanitem", loanitems);
             
         getServletContext().getRequestDispatcher(url).forward(request, response);                  
